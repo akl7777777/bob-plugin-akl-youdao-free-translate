@@ -18,10 +18,10 @@ def youdaoTranslate():
     target_lang = 'AUTO'
     if 'text' in data:
         translate_words = data['text']
-    if 'source_lang' in data:
-        source_lang = data['source_lang']
-    if 'target_lang' in data:
-        target_lang = data['target_lang']
+    # if 'source_lang' in data:
+    #     source_lang = data['source_lang']
+    # if 'target_lang' in data:
+    #     target_lang = data['target_lang']
     # ctx = execjs.compile(open('youdao.js', encoding='utf-8').read())
     ctx = execjs.compile('''
         const crypto = require('crypto');
@@ -80,8 +80,10 @@ def youdaoTranslate():
     results = requests.post('https://dict.youdao.com/webtranslate', data=data, headers=headers)
     fanyi = eval(ctx.call('A', results.text))
     # print(fanyi['translateResult'][0][0]['tgt'])
-    for item in fanyi['translateResult'][0]:
-        print(item['tgt'])
+    # 判断key是否存在,修正异常返回的处理逻辑
+    if 'translateResult' in fanyi:
+        for item in fanyi['translateResult'][0]:
+            print(item['tgt'])
     return fanyi
 
 
