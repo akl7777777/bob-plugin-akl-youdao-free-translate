@@ -16,6 +16,14 @@ independently里面是不依赖于其他服务的独立插件,但是此插件依
 第一步:
 运行youdaoTranslateServer可执行文件,由于我今天手头只有一台Intel芯片的MacBook,而Python又不能跨平台打包,所以暂时只有一个打包好的文件,不确定apple芯片是否可以用;有兴趣的同学可以自行搭建Python环境打包或者直接启动服务.我本地用的是Python3.79版本Intel芯片macOS系统
 
+注意: macos由于对软件限制较⼤，对未知来源的程序是禁⽌使⽤的，所以双击多半打不开，此时需要按
+下⾯的步骤进⾏操作。
+
+打开终端,执行如下命令:
+chmod a+x <你的youdaoTranslateServer可执行文件存放的路径>
+
+第⼀次跑时需要输⼊chmod。以后每次运⾏时，其它步骤不变，只是不必再输该chmod命令。
+
 第二步:
 
 双击.bobplugin后缀的文件即可安装;安装后尽情享受吧!
