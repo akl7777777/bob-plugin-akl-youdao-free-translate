@@ -1,0 +1,27 @@
+{
+    "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
+    "version": "0.0.3",
+    "category": "translate",
+    "name": "有道翻译网页版api",
+    "summary": "有道翻译网页版api",
+    "icon": "icon.png",
+    "author": "akl7777777 <akl7777777@163.com>",
+    "homepage": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate",
+    "appcast": "",
+    "minBobVersion": "0.5.0",
+    "options": [
+        {
+            "identifier": "desc",
+            "type": "menu",
+            "title": "描述",
+            "defaultValue": "akl7777777",
+            "menuValues": [
+              {
+                "title": "有道翻译网页版api无需token无需登录",
+                "value": "akl7777777"
+              }
+            ],
+            "desc":"小芍同学有道翻译网页版api无需token无需登录"
+        }
+    ]
+}
