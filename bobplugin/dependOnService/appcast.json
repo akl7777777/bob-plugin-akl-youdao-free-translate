@@ -1,0 +1,19 @@
+{
+    "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
+    "versions": [
+        {
+            "version": "0.0.5",
+            "desc": "增加插件检测更新功能",
+            "sha256": "52d092d509ae768c70cc87efc70ee718f0a7ddefb01b108e5e3c44bd90cd7592",
+            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/bob-plugin-akl-youdao-free-translate_v0.0.5/youdao-dependOnService_v0.0.5.bobplugin",
+            "minBobVersion": "0.5.0"
+        },
+        {
+            "version": "0.0.3",
+            "desc": "初始版本",
+            "sha256": "5fddc4f6cf57853467135cd8ec0914bc21191c20c7f77f3be1496b37da11ecf8",
+            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/bob-plugin-akl-youdao-free-translate/dependOnService.bobplugin",
+            "minBobVersion": "0.5.0"
+        }
+    ]
+}
