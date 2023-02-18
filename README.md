@@ -22,3 +22,10 @@ independently里面是不依赖于其他服务的独立插件,但是此插件依
 <img width="818" alt="image" src="https://user-images.githubusercontent.com/84266551/219827739-96298ad7-dddd-4542-986d-9a39a5dc1618.png">
 
 
+
+
+### 如果喜欢的话,可以给请作者吃一份特色腰花面,或者喝一杯可乐
+
+
+
+<img width="629" alt="image" src="https://user-images.githubusercontent.com/84266551/219829225-51a7c532-36e7-40ae-97b9-66bb6d2c52b4.png">
