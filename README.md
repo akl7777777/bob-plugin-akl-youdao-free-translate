@@ -1,6 +1,12 @@
 # bob-plugin-akl-youdao-free-translate
 免费无限次使用有道翻译,根据网页版JavaScript加密算法开发的bobplugin;所以只要官网的算法不该,理论上就可以无限使用;本来是想做成纯插件的,但是bob内核JavaScript没有node那么全的加密库,所以只能借用Python启动一个服务运行虚拟的node环境
 
+项目结构简介:
+youdaoTranslateServer文件夹下用来启动Python服务,Python调用node环境的加密解密功能模拟请求
+bobplugin文件夹下有两个目录
+dependOnService里面是依赖于Python服务的插件,用此插件需要本地启动Python服务,本人亲测可用;
+independently里面是不依赖于其他服务的独立插件,但是此插件依赖的node环境尚不完善,还需要和bob开发者共通谈论完善方案,故不可用;
+
 
 使用方法如下:
 
