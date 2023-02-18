@@ -89,31 +89,7 @@ function A(t) {
 }
 */
 
-function padKey(key) {
-  const paddedKey = new Uint8Array(16);
-  const encoder = new TextEncoder();
-  const keyBytes = encoder.encode(key);
-  paddedKey.set(keyBytes.slice(0, 16));
-  return paddedKey;
-}
-
-function padIV(iv) {
-  const paddedIV = new Uint8Array(16);
-  const encoder = new TextEncoder();
-  const ivBytes = encoder.encode(iv);
-  paddedIV.set(ivBytes.slice(0, 16));
-  return paddedIV;
-}
-
-function aes128cbcDecrypt(key, iv, ciphertext) {
-  const keyHex = CryptoJS.enc.Hex.parse(CryptoJS.enc.Base64.parse(key).toString(CryptoJS.enc.Hex));
-  $log.error('***********keyHex==>' + keyHex)
-  const ivHex = CryptoJS.enc.Hex.parse(CryptoJS.enc.Base64.parse(iv).toString(CryptoJS.enc.Hex));
-  $log.error('***********ivHex==>' + ivHex)
-  const decrypted = CryptoJS.AES.decrypt({ ciphertext: CryptoJS.enc.Base64.parse(ciphertext) }, keyHex, { iv: ivHex, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 });
-  return decrypted.toString(CryptoJS.enc.Utf8);
-}
-
+/*
 function A (t, o, n) {
     o = "ydsecret://query/key/B*RGygVywfNBwpmBaZg*WT7SIOUP2T0C9WHMZN39j^DAdaZhAnxvGcCY6VYFwnHl"
     n = "ydsecret://query/iv/C@lZe2YzHtZ2CYgaXKSVfsb7Y4QWHjITPPZ0nQp87fBeJ!Iv6v^6fvi2WN@bYpJ4"
@@ -128,6 +104,20 @@ function A (t, o, n) {
       });
     let s = i.toString(CryptoJS.enc.Utf8);
     return s
+}
+*/
+
+function A (t, o, n) {
+  o = "ydsecret://query/key/BRGygVywfNBwpmBaZgWT7SIOUP2T0C9WHMZN39j^DAdaZhAnxvGcCY6VYFwnHl"
+  n = "ydsecret://query/iv/C@lZe2YzHtZ2CYgaXKSVfsb7Y4QWHjITPPZ0nQp87fBeJ!Iv6v^6fvi2WN@bYpJ4"
+  if (!t)
+      return null;
+  const a = CryptoJS.enc.Hex.parse(m(o)),
+      r = CryptoJS.enc.Hex.parse(m(n)),
+      i = CryptoJS.AES.decrypt(t, a, {
+          iv: r
+      });
+  return i.toString(CryptoJS.enc.Utf8);
 }
 /*function A (t, o, n) {
   $log.error('***********66t==>' + t)
