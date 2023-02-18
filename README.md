@@ -13,8 +13,9 @@ independently里面是不依赖于其他服务的独立插件,但是此插件依
 第0步:
 下载右侧的release
 
+
 第一步:
-运行youdaoTranslateServer可执行文件,由于我今天手头只有一台Intel芯片的MacBook,而Python又不能跨平台打包,所以暂时只有一个打包好的文件,不确定apple芯片是否可以用;有兴趣的同学可以自行搭建Python环境打包或者直接启动服务.我本地用的是Python3.79版本Intel芯片macOS系统
+运行youdaoTranslateServer可执行文件,由于我今天手头只有一台Intel芯片的MacBook,而Python又不能跨平台打包,所以暂时只有一个打包好的文件,不确定apple芯片是否可以用;有兴趣的同学可以自行搭建Python环境打包或者直接启动服务.我本地用的是Python3.79版本Intel芯片macOS系统;打包命令 pyinstaller --onefile youdao.py 当然在那之前你需要先 pip install pyinstaller
 
 注意: macos由于对软件限制较⼤，对未知来源的程序是禁⽌使⽤的，所以双击多半打不开，此时需要按
 下⾯的步骤进⾏操作。
