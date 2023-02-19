@@ -7,6 +7,8 @@ bobplugin文件夹下有两个目录
 dependOnService里面是依赖于Python服务的插件,用此插件需要本地启动Python服务,本人亲测可用;
 independently里面是不依赖于其他服务的独立插件,但是此插件依赖的node环境尚不完善,还需要和bob开发者共通谈论完善方案,故不可用;
 
+bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网地址:https://bobtranslate.com/
+
 
 使用方法如下(总共分三步):
 
@@ -45,6 +47,7 @@ chmod a+x <你的youdaoTranslateServer可执行文件存放的路径>
 效果图如下:
 
 <img width="818" alt="image" src="https://user-images.githubusercontent.com/84266551/219827739-96298ad7-dddd-4542-986d-9a39a5dc1618.png">
+
 
 此外,对于其他非bob用户,需要调用有道翻译的也可以直接调用服务如下图:
 入参样例:
