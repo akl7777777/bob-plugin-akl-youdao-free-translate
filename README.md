@@ -46,6 +46,24 @@ chmod a+x <你的youdaoTranslateServer可执行文件存放的路径>
 
 <img width="818" alt="image" src="https://user-images.githubusercontent.com/84266551/219827739-96298ad7-dddd-4542-986d-9a39a5dc1618.png">
 
+此外,对于其他非bob用户,需要调用有道翻译的也可以直接调用服务如下图:
+入参样例:
+{"text":"你好"}
+返回值样例:
+{
+    "code": 0,
+    "translateResult": [
+        [
+            {
+                "src": "你好",
+                "srcPronounce": "nĭhăo",
+                "tgt": "hello"
+            }
+        ]
+    ],
+    "type": "zh-CHS2en"
+}
+<img width="911" alt="image" src="https://user-images.githubusercontent.com/84266551/219946834-05c71d59-f024-4777-9448-5692a677e2d2.png">
 
 
 
