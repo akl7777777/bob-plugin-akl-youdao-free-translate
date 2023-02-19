@@ -4,7 +4,7 @@
         {
             "version": "0.0.6",
             "desc": "修复多个自然段被截断只剩一个的问题",
-            "sha256": "400561adad7adf8c833eeb73fd29e526bb10823c48b7c822366a8b5aa5796327",
+            "sha256": "38df7a1224c0506d4f31f45f97c98266c8e807a25b973a263466cd4b10978f3e",
             "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.6/youdao-dependOnService_v0.0.6.bobplugin",
             "minBobVersion": "0.5.0"
         },
