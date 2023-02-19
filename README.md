@@ -8,7 +8,7 @@ dependOnService里面是依赖于Python服务的插件,用此插件需要本地�
 independently里面是不依赖于其他服务的独立插件,但是此插件依赖的node环境尚不完善,还需要和bob开发者共通谈论完善方案,故不可用;
 
 
-使用方法如下:
+使用方法如下(总共分三步):
 
 第0步:
 下载右侧的release
@@ -33,6 +33,12 @@ chmod a+x <你的youdaoTranslateServer可执行文件存放的路径>
 在后续的版本,插件会提供请求地址的输入框,填入对应的服务器地址即可;
 
 第二步:
+
+配置服务器域名,本地启动默认域名是http://127.0.0.1:9527/youdaoTranslate  可以不用修改;如果服务部署在其他机器,可以根据自己机器的域名来配置如下图
+
+<img width="509" alt="image" src="https://user-images.githubusercontent.com/84266551/219946403-2eff0fde-af34-4172-8ad9-e3638acfccf9.png">
+
+第三步:
 
 双击.bobplugin后缀的文件即可安装;安装后尽情享受吧!
 
