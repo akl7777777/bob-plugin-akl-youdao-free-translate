@@ -12,7 +12,8 @@ independently里面是不依赖于其他服务的独立插件,但是此插件依
 
 第0步:
 下载右侧的release
-https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/bob-plugin-akl-youdao-free-translate_v0.0.5/youdaoTranslateServer_macos_x86_64
+https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.6/youdaoTranslateServer_macos_x86_64
+
 
 第一步:
 运行youdaoTranslateServer可执行文件,由于我今天手头只有一台Intel芯片的MacBook,而Python又不能跨平台打包,所以暂时只有一个打包好的文件,不确定apple芯片是否可以用;有兴趣的同学可以自行搭建Python环境打包或者直接启动服务.我本地用的是Python3.79版本Intel芯片macOS系统;打包命令 pyinstaller --onefile youdao.py 当然在那之前你需要先 pip install pyinstaller
