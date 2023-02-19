@@ -35,11 +35,16 @@ function translate(query, completion) {
           body: body,
           handler: function (resp) {
             const rs = []
-            if (resp.data.translateResult[0].length) {
-              for (let i = 0; i < resp.data.translateResult[0].length; i++) {
-                rs.push(resp.data.translateResult[0][i].tgt)
+            if(resp.data.translateResult.length){
+              for (let i = 0; i < resp.data.translateResult.length; i++) {
+                if (resp.data.translateResult[0].length) {
+                  for (let j = 0; j < resp.data.translateResult[i].length; j++) {
+                    rs.push(resp.data.translateResult[i][j].tgt)
+                  }
+                }
               }
             }
+            
             completion({
               result: {
                 from: query.detectFrom,

@@ -2,6 +2,13 @@
     "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
     "versions": [
         {
+            "version": "0.0.6",
+            "desc": "修复多个自然段被截断只剩一个的问题",
+            "sha256": "400561adad7adf8c833eeb73fd29e526bb10823c48b7c822366a8b5aa5796327",
+            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.6/youdao-dependOnService_v0.0.6.bobplugin",
+            "minBobVersion": "0.5.0"
+        },
+        {
             "version": "0.0.5",
             "desc": "增加插件检测更新功能",
             "sha256": "52d092d509ae768c70cc87efc70ee718f0a7ddefb01b108e5e3c44bd90cd7592",
