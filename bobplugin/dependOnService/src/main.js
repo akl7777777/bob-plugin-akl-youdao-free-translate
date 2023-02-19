@@ -4,9 +4,7 @@ var utils = require('./utils.js');
 function supportLanguages() {
   return config.supportedLanguages.map(([standardLang]) => standardLang);
 }
-
 function translate(query, completion) {
-
   (async () => {
     const targetLanguage = utils.langMap.get(query.detectTo);
     const sourceLanguage = utils.langMap.get(query.detectFrom);
@@ -23,7 +21,9 @@ function translate(query, completion) {
     const translate_text = query.text || '';
 
     if (translate_text !== '') {
-      const url = 'http://127.0.0.1:9527/youdaoTranslate';
+      const serverUrl = $option.serverUrl;
+
+      const url = serverUrl || 'http://127.0.0.1:9527/youdaoTranslate';
       try {
         const body = Object.assign({}, { "text": translate_text, "source_lang": source_lang, "target_lang": target_lang });
         $http.request({
@@ -34,7 +34,7 @@ function translate(query, completion) {
           },
           body: body,
           handler: function (resp) {
-            if(resp.error){
+            if (resp.error) {
               $log.error('*********** resp ==> ' + JSON.stringify(resp))
               completion({
                 error: {

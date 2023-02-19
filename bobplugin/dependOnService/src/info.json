@@ -1,27 +1,34 @@
 {
-    "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
-    "version": "0.0.6",
-    "category": "translate",
-    "name": "有道翻译网页版api",
-    "summary": "有道翻译网页版api",
-    "icon": "icon.png",
-    "author": "akl7777777 <akl7777777@163.com>",
-    "homepage": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate",
-    "appcast": "https://raw.githubusercontent.com/akl7777777/bob-plugin-akl-youdao-free-translate/main/bobplugin/dependOnService/appcast.json",
-    "minBobVersion": "0.5.0",
-    "options": [
+  "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
+  "version": "0.0.7",
+  "category": "translate",
+  "name": "有道翻译网页版api",
+  "summary": "有道翻译网页版api",
+  "icon": "icon.png",
+  "author": "akl7777777 <akl7777777@163.com>",
+  "homepage": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate",
+  "appcast": "https://raw.githubusercontent.com/akl7777777/bob-plugin-akl-youdao-free-translate/main/bobplugin/dependOnService/appcast.json",
+  "minBobVersion": "0.5.0",
+  "options": [
+    {
+      "identifier": "desc",
+      "type": "menu",
+      "title": "描述",
+      "defaultValue": "akl7777777",
+      "menuValues": [
         {
-            "identifier": "desc",
-            "type": "menu",
-            "title": "描述",
-            "defaultValue": "akl7777777",
-            "menuValues": [
-              {
-                "title": "有道翻译网页版api无需token无需登录",
-                "value": "akl7777777"
-              }
-            ],
-            "desc":"小芍同学有道翻译网页版api无需token无需登录"
+          "title": "有道翻译网页版api无需token无需登录",
+          "value": "akl7777777"
         }
-    ]
+      ],
+      "desc": "小芍同学有道翻译网页版api无需token无需登录"
+    },
+    {
+      "identifier": "serverUrl",
+      "type": "text",
+      "title": "接口域名",
+      "defaultValue": "http://127.0.0.1:9527/youdaoTranslate",
+      "desc":"本地启动服务地址默认为http://127.0.0.1:9527/youdaoTranslate;可以不用修改;远程服务器启动请自行填写服务器的域名;"
+    }
+  ]
 }

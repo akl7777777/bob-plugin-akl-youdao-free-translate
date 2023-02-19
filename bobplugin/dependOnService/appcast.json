@@ -2,6 +2,13 @@
     "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
     "versions": [
         {
+            "version": "0.0.7",
+            "desc": "增加远程服务器配置功能,服务可以不用部署在自己本机了 ^-^ ",
+            "sha256": "2d57d3b1020da4f0cfa0721f93c248f3c6fa874027966cbd51fc9151506666a7",
+            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.7/youdao-dependOnService_v0.0.7.bobplugin",
+            "minBobVersion": "0.5.0"
+        },
+        {
             "version": "0.0.6",
             "desc": "修复多个自然段被截断只剩一个的问题",
             "sha256": "4658f1bffc72477a27530f1e04b139e6db727a6b293f711975019ff900ff656d",
