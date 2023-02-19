@@ -34,8 +34,18 @@ function translate(query, completion) {
           },
           body: body,
           handler: function (resp) {
+            if(resp.error){
+              $log.error('*********** resp ==> ' + JSON.stringify(resp))
+              completion({
+                error: {
+                  type: resp.error.code || 'unknown',
+                  message: resp.error.localizedDescription || '未知错误',
+                  addtion: resp.error.localizedDescription,
+                },
+              });
+            }
             const rs = []
-            if (resp.data.translateResult.length) {
+            if (resp.data.translateResult && resp.data.translateResult.length) {
               for (let i = 0; i < resp.data.translateResult.length; i++) {
                 if (resp.data.translateResult[i].length) {
                   let rsParagraph = ''
