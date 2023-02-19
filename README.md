@@ -12,7 +12,7 @@ independently里面是不依赖于其他服务的独立插件,但是此插件依
 
 第0步:
 下载右侧的release
-https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.6/youdaoTranslateServer_macos_x86_64
+https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.7/youdaoTranslateServer_macos_x86_64
 
 
 第一步:
