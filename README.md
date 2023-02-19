@@ -26,7 +26,9 @@ chmod a+x <你的youdaoTranslateServer可执行文件存放的路径>
 
 第⼀次跑时需要输⼊chmod。以后每次运⾏时，其它步骤不变，只是不必再输该chmod命令。
 
-当然,如果你不想占用自己电脑的资源,有条件也可以用公司办公室的其他Windows电脑启动服务https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.6/youdaoTranslateServer_windows_x86_64.exe,也可以使用公司或个人的Linux服务器启动服务https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.6/youdaoTranslateServer_linux_x86_64
+当然,如果你不想占用自己电脑的资源,有条件也可以用公司办公室的其他Windows电脑启动服务https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.6/youdaoTranslateServer_windows_x86_64.exe
+
+也可以使用公司或个人的Linux服务器启动服务https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.6/youdaoTranslateServer_linux_x86_64
 
 在后续的版本,插件会提供请求地址的输入框,填入对应的服务器地址即可;
 
