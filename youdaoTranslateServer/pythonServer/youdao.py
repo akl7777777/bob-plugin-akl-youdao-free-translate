@@ -82,8 +82,11 @@ def youdaoTranslate():
     # print(fanyi['translateResult'][0][0]['tgt'])
     # 判断key是否存在,修正异常返回的处理逻辑
     if 'translateResult' in fanyi:
-        for item in fanyi['translateResult'][0]:
-            print(item['tgt'])
+        for paragraph in fanyi['translateResult']:
+            s = ''
+            for item in paragraph:
+                s += item['tgt']
+            print(s)
     return fanyi
 
 
