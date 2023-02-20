@@ -2,7 +2,7 @@
   "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
   "version": "0.0.7",
   "category": "translate",
-  "name": "有道翻译网页版api",
+  "name": "Free 有道翻译",
   "summary": "有道翻译网页版api",
   "icon": "icon.png",
   "author": "akl7777777 <akl7777777@163.com>",
