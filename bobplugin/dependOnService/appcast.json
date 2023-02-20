@@ -2,6 +2,13 @@
     "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
     "versions": [
         {
+            "version": "0.0.8",
+            "desc": "更换图标以及插件名称,这样显得更专业",
+            "sha256": "2c50fb5aee5cdc0ff555c0adc9fcd86d60bffac267476b7154c01d2a6edc011e",
+            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.8/youdao-dependOnService_v0.0.8.bobplugin",
+            "minBobVersion": "0.5.0"
+        },
+        {
             "version": "0.0.7",
             "desc": "增加远程服务器配置功能,服务可以不用部署在自己本机了 ^-^ ",
             "sha256": "2d57d3b1020da4f0cfa0721f93c248f3c6fa874027966cbd51fc9151506666a7",
