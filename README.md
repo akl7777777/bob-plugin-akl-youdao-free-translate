@@ -3,6 +3,8 @@
 
 需要deepl插件的朋友请看这里:[deepl免token翻译插件](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate)
 
+需要百度翻译插件的朋友请看这里:[百度翻译插件](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate)
+
 项目结构简介:
 youdaoTranslateServer文件夹下用来启动Python服务,Python调用node环境的加密解密功能模拟请求
 bobplugin文件夹下有两个目录
