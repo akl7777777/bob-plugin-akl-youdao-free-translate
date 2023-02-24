@@ -7,6 +7,8 @@
 
 需要MOJi辞書插件的朋友请看这里:[只为日语 - MOJi辞書（じしょ）](https://github.com/akl7777777/bob-plugin-akl-mojidict-translate)
 
+需要彩云小译插件的朋友请看这里:[免秘钥彩云小译](https://github.com/akl7777777/bob-plugin-akl-caiyunxiaoyi-free-translate)
+
 项目结构简介:
 youdaoTranslateServer文件夹下用来启动Python服务,Python调用node环境的加密解密功能模拟请求
 bobplugin文件夹下有两个目录
