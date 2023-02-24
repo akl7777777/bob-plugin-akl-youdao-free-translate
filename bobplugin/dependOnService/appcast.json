@@ -2,6 +2,13 @@
     "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
     "versions": [
         {
+            "version": "0.0.9",
+            "desc": "重大更新!有道插件新增免启动服务本地版,可以不用启动服务了",
+            "sha256": "63a993c0f1a453e351ff82f6c3b9a61ba3bba38e93053c36ed7ea5ec49902e3d",
+            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.9/youdao-dependOnService_v0.0.9.bobplugin",
+            "minBobVersion": "0.5.0"
+        },
+        {
             "version": "0.0.8",
             "desc": "更换图标以及插件名称,这样显得更专业",
             "sha256": "2c50fb5aee5cdc0ff555c0adc9fcd86d60bffac267476b7154c01d2a6edc011e",

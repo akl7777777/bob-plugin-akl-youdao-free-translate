@@ -22,20 +22,24 @@ function translate(query, completion) {
 
     if (translate_text !== '') {
       const serverUrl = $option.serverUrl;
+      const type = $option.type;
 
-      const url = serverUrl || 'http://127.0.0.1:9527/youdaoTranslate';
-      try {
-        const body = Object.assign({}, { "text": translate_text, "source_lang": source_lang, "target_lang": target_lang });
+      let url = serverUrl || 'http://127.0.0.1:9527/youdaoTranslate';
+
+      if (type === 'local') {
+        url = 'https://aidemo.youdao.com/trans'
+        const body = Object.assign({}, { "q": translate_text, "from": source_lang, "to": target_lang });
         $http.request({
           method: "POST",
           url: url,
           header: {
-            "Content-Type": "application/json"
+            "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+            "user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
           },
           body: body,
           handler: function (resp) {
             if (resp.error) {
-              $log.error('*********** resp ==> ' + JSON.stringify(resp))
+              $log.error('*********** 本地resp ==> ' + JSON.stringify(resp))
               completion({
                 error: {
                   type: resp.error.code || 'unknown',
@@ -44,37 +48,78 @@ function translate(query, completion) {
                 },
               });
             }
-            const rs = []
-            if (resp.data.translateResult && resp.data.translateResult.length) {
-              for (let i = 0; i < resp.data.translateResult.length; i++) {
-                if (resp.data.translateResult[i].length) {
-                  let rsParagraph = ''
-                  for (let j = 0; j < resp.data.translateResult[i].length; j++) {
-                    rsParagraph += resp.data.translateResult[i][j].tgt
-                  }
-                  rs.push(rsParagraph)
-                }
-              }
+            if (resp.data.translation && resp.data.translation.length) {
+              completion({
+                result: {
+                  from: query.detectFrom,
+                  to: query.detectTo,
+                  toParagraphs: resp.data.translation,
+                },
+              });
+            } else {
+              completion({
+                error: {
+                  type: 'unknown',
+                  message: JSON.stringify(resp.data) || '未知错误',
+                  addtion: '未知错误',
+                },
+              });
             }
-
-            completion({
-              result: {
-                from: query.detectFrom,
-                to: query.detectTo,
-                toParagraphs: rs,
-              },
-            });
           }
         });
+      } else {
+        try {
+          const body = Object.assign({}, { "text": translate_text, "source_lang": source_lang, "target_lang": target_lang });
+          $http.request({
+            method: "POST",
+            url: url,
+            header: {
+              "Content-Type": "application/json"
+            },
+            body: body,
+            handler: function (resp) {
+              if (resp.error) {
+                $log.error('*********** resp ==> ' + JSON.stringify(resp))
+                completion({
+                  error: {
+                    type: resp.error.code || 'unknown',
+                    message: resp.error.localizedDescription || '未知错误',
+                    addtion: resp.error.localizedDescription,
+                  },
+                });
+              }
+              const rs = []
+              if (resp.data.translateResult && resp.data.translateResult.length) {
+                for (let i = 0; i < resp.data.translateResult.length; i++) {
+                  if (resp.data.translateResult[i].length) {
+                    let rsParagraph = ''
+                    for (let j = 0; j < resp.data.translateResult[i].length; j++) {
+                      rsParagraph += resp.data.translateResult[i][j].tgt
+                    }
+                    rs.push(rsParagraph)
+                  }
+                }
+              }
+              completion({
+                result: {
+                  from: query.detectFrom,
+                  to: query.detectTo,
+                  toParagraphs: rs,
+                },
+              });
+            }
+          });
+        }
+        catch (e) {
+          $log.error('接口请求错误 ==> ' + JSON.stringify(e))
+          Object.assign(e, {
+            _type: 'network',
+            _message: '接口请求错误 - ' + JSON.stringify(e),
+          });
+          throw e;
+        }
       }
-      catch (e) {
-        $log.error('接口请求错误 ==> ' + JSON.stringify(e))
-        Object.assign(e, {
-          _type: 'network',
-          _message: '接口请求错误 - ' + JSON.stringify(e),
-        });
-        throw e;
-      }
+
     }
   })().catch((err) => {
     $log.error('***********解析返回值异常==>' + JSON.stringify(err))

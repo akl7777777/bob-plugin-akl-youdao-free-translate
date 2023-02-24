@@ -1,9 +1,9 @@
 {
   "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "category": "translate",
   "name": "Free 有道翻译",
-  "summary": "有道翻译网页版api",
+  "summary": "有道翻译免费免秘钥插件",
   "icon": "icon.png",
   "author": "akl7777777 <akl7777777@163.com>",
   "homepage": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate",
@@ -24,11 +24,28 @@
       "desc": "小芍同学有道翻译网页版api无需token无需登录"
     },
     {
+      "identifier": "type",
+      "type": "menu",
+      "title": "类型",
+      "defaultValue": "local",
+      "menuValues": [
+        {
+          "title": "本地不依赖服务",
+          "value": "local"
+        },
+        {
+          "title": "依赖服务(需要自行启动服务)",
+          "value": "service"
+        }
+      ],
+      "desc": "翻译类型:本地版(无需额外配置直接使用);依赖服务(需要自行启动服务)"
+    },
+    {
       "identifier": "serverUrl",
       "type": "text",
       "title": "接口域名",
       "defaultValue": "http://127.0.0.1:9527/youdaoTranslate",
-      "desc":"本地启动服务地址默认为http://127.0.0.1:9527/youdaoTranslate;可以不用修改;远程服务器启动请自行填写服务器的域名;"
+      "desc": "本地启动服务地址默认为http://127.0.0.1:9527/youdaoTranslate;可以不用修改;远程服务器启动请自行填写服务器的域名;"
     }
   ]
 }
