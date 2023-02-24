@@ -4,6 +4,9 @@
 ~~**本来是想做成纯插件的,但是bob内核JavaScript没有node那么全的加密库,所以只能借用Python启动一个服务运行虚拟的node环境**~~
 
 **重大更新!有道插件新增免启动服务本地版,可以不用启动服务了;不过服务启动的方式依然保留.两种可以切换使用**
+
+下载地址:[youdao-free_v0.0.9.bobplugin](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.9/youdao-dependOnService_v0.0.9.bobplugin)
+
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/84266551/221099163-e6f89b07-0a3a-42ae-8c1c-f95ae24901ad.png">
 
 
