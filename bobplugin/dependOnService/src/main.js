@@ -37,7 +37,7 @@ function translate(query, completion) {
                 let time = "".concat(translate_text).concat(v).length % 10,
                     r = "".concat(translate_text).concat(v),
                     o = h(r),
-                    n = "".concat(_).concat(translate_text).concat(time+'').concat(w).concat(o),
+                    n = "".concat(_).concat(translate_text).concat(time + '').concat(w).concat(o),
                     f = h(n)
 
                 // 查字典,不查句子
@@ -78,7 +78,21 @@ function translate(query, completion) {
                             if (word.usphone) {
                                 toDict.phonetics.push({
                                     "type": "us",
-                                    "value": word.usphone
+                                    "value": word.usphone,
+                                    "tts": {
+                                        "type": "url",
+                                        "value": "https://dict.youdao.com/dictvoice?audio=" + word.usspeech
+                                    }
+                                })
+                            }
+                            if (word.ukspeech) {
+                                toDict.phonetics.push({
+                                    "type": "us",
+                                    "value": word.usphone,
+                                    "tts": {
+                                        "type": "url",
+                                        "value": "https://dict.youdao.com/dictvoice?audio=" + word.usspeech
+                                    }
                                 })
                             }
                             if (word.ukphone) {
@@ -90,6 +104,11 @@ function translate(query, completion) {
                             word.trs.forEach(function (e) {
                                 toDict.parts.push({part: e.pos, means: [e.tran]})
                             })
+                            if (word.wfs && word.wfs.length){
+                                word.wfs.forEach(function (e) {
+                                    toDict.exchanges.push({name: e.wf.name, words: [e.wf.value]})
+                                })
+                            }
                             toDict.additions.push({name: '标签', value: resp.data.ec.exam_type.join('/')})
                             completion({
                                 result: {
