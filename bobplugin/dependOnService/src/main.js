@@ -103,7 +103,10 @@ function translate(query, completion) {
                                     toDict.exchanges.push({name: e.wf.name, words: [e.wf.value]})
                                 })
                             }
-                            toDict.additions.push({name: '标签', value: resp.data.ec.exam_type.join('/')})
+                            toDict.additions.push({
+                                name: '标签',
+                                value: (resp.data.ec.exam_type ? resp.data.ec.exam_type.join('/') : '')
+                            })
                             completion({
                                 result: {
                                     from: query.detectFrom,
