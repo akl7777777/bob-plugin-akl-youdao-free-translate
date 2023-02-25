@@ -85,26 +85,20 @@ function translate(query, completion) {
                                     }
                                 })
                             }
-                            if (word.ukspeech) {
-                                toDict.phonetics.push({
-                                    "type": "us",
-                                    "value": word.usphone,
-                                    "tts": {
-                                        "type": "url",
-                                        "value": "https://dict.youdao.com/dictvoice?audio=" + word.usspeech
-                                    }
-                                })
-                            }
                             if (word.ukphone) {
                                 toDict.phonetics.push({
                                     "type": "uk",
-                                    "value": word.ukphone
+                                    "value": word.ukphone,
+                                    "tts": {
+                                        "type": "url",
+                                        "value": "https://dict.youdao.com/dictvoice?audio=" + word.ukspeech
+                                    }
                                 })
                             }
                             word.trs.forEach(function (e) {
                                 toDict.parts.push({part: e.pos, means: [e.tran]})
                             })
-                            if (word.wfs && word.wfs.length){
+                            if (word.wfs && word.wfs.length) {
                                 word.wfs.forEach(function (e) {
                                     toDict.exchanges.push({name: e.wf.name, words: [e.wf.value]})
                                 })
