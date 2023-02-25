@@ -4,7 +4,7 @@
         {
             "version": "0.1.0",
             "desc": "重大更新!有道插件新增免启动服务本地版,可以不用启动服务了;新增查询单词功能,单词更详细;",
-            "sha256": "63a993c0f1a453e351ff82f6c3b9a61ba3bba38e93053c36ed7ea5ec49902e3d",
+            "sha256": "d60f395653776cdcfedb725bdfd71599ffaa30523276130226cf44e1ec55e5bc",
             "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.1.0/youdao-dependOnService_v0.1.0.bobplugin",
             "minBobVersion": "0.5.0"
         },
