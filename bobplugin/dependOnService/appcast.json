@@ -1,61 +1,68 @@
 {
-    "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
-    "versions": [
-        {
-            "version": "0.1.1",
-            "desc": "重大更新!有道插件新增免启动服务本地版,可以不用启动服务了;新增查询单词功能,单词更详细;",
-            "sha256": "dd3211f590497535f648db5f5d2c2676c062fecf83480a285b703dfdd83d6020",
-            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.1.1/youdao-dependOnService_v0.1.1.bobplugin",
-            "minBobVersion": "0.5.0"
-        },
-        {
-            "version": "0.1.0",
-            "desc": "重大更新!有道插件新增免启动服务本地版,可以不用启动服务了;新增查询单词功能,单词更详细;",
-            "sha256": "d60f395653776cdcfedb725bdfd71599ffaa30523276130226cf44e1ec55e5bc",
-            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.1.0/youdao-dependOnService_v0.1.0.bobplugin",
-            "minBobVersion": "0.5.0"
-        },
-        {
-            "version": "0.0.9",
-            "desc": "重大更新!有道插件新增免启动服务本地版,可以不用启动服务了",
-            "sha256": "63a993c0f1a453e351ff82f6c3b9a61ba3bba38e93053c36ed7ea5ec49902e3d",
-            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.9/youdao-dependOnService_v0.0.9.bobplugin",
-            "minBobVersion": "0.5.0"
-        },
-        {
-            "version": "0.0.8",
-            "desc": "更换图标以及插件名称,这样显得更专业",
-            "sha256": "2c50fb5aee5cdc0ff555c0adc9fcd86d60bffac267476b7154c01d2a6edc011e",
-            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.8/youdao-dependOnService_v0.0.8.bobplugin",
-            "minBobVersion": "0.5.0"
-        },
-        {
-            "version": "0.0.7",
-            "desc": "增加远程服务器配置功能,服务可以不用部署在自己本机了 ^-^ ",
-            "sha256": "2d57d3b1020da4f0cfa0721f93c248f3c6fa874027966cbd51fc9151506666a7",
-            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.7/youdao-dependOnService_v0.0.7.bobplugin",
-            "minBobVersion": "0.5.0"
-        },
-        {
-            "version": "0.0.6",
-            "desc": "修复多个自然段被截断只剩一个的问题",
-            "sha256": "4658f1bffc72477a27530f1e04b139e6db727a6b293f711975019ff900ff656d",
-            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.6/youdao-dependOnService_v0.0.6.bobplugin",
-            "minBobVersion": "0.5.0"
-        },
-        {
-            "version": "0.0.5",
-            "desc": "增加插件检测更新功能",
-            "sha256": "52d092d509ae768c70cc87efc70ee718f0a7ddefb01b108e5e3c44bd90cd7592",
-            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/bob-plugin-akl-youdao-free-translate_v0.0.5/youdao-dependOnService_v0.0.5.bobplugin",
-            "minBobVersion": "0.5.0"
-        },
-        {
-            "version": "0.0.3",
-            "desc": "初始版本",
-            "sha256": "5fddc4f6cf57853467135cd8ec0914bc21191c20c7f77f3be1496b37da11ecf8",
-            "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/bob-plugin-akl-youdao-free-translate/dependOnService.bobplugin",
-            "minBobVersion": "0.5.0"
-        }
-    ]
+  "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
+  "versions": [
+    {
+      "version": "0.1.2",
+      "desc": "重大更新!有道插件新增免启动服务本地版;1.新增查询单词功能,单词更详细;2.修复:增加字典单词发音,增加字典单词变形",
+      "sha256": "dd3211f590497535f648db5f5d2c2676c062fecf83480a285b703dfdd83d6020",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.1.2/youdao-dependOnService_v0.1.2.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
+      "version": "0.1.1",
+      "desc": "重大更新!有道插件新增免启动服务本地版,可以不用启动服务了;新增查询单词功能,单词更详细;",
+      "sha256": "dd3211f590497535f648db5f5d2c2676c062fecf83480a285b703dfdd83d6020",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.1.1/youdao-dependOnService_v0.1.1.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
+      "version": "0.1.0",
+      "desc": "重大更新!有道插件新增免启动服务本地版,可以不用启动服务了;新增查询单词功能,单词更详细;",
+      "sha256": "d60f395653776cdcfedb725bdfd71599ffaa30523276130226cf44e1ec55e5bc",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.1.0/youdao-dependOnService_v0.1.0.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
+      "version": "0.0.9",
+      "desc": "重大更新!有道插件新增免启动服务本地版,可以不用启动服务了",
+      "sha256": "63a993c0f1a453e351ff82f6c3b9a61ba3bba38e93053c36ed7ea5ec49902e3d",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.9/youdao-dependOnService_v0.0.9.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
+      "version": "0.0.8",
+      "desc": "更换图标以及插件名称,这样显得更专业",
+      "sha256": "2c50fb5aee5cdc0ff555c0adc9fcd86d60bffac267476b7154c01d2a6edc011e",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.8/youdao-dependOnService_v0.0.8.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
+      "version": "0.0.7",
+      "desc": "增加远程服务器配置功能,服务可以不用部署在自己本机了 ^-^ ",
+      "sha256": "2d57d3b1020da4f0cfa0721f93c248f3c6fa874027966cbd51fc9151506666a7",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.7/youdao-dependOnService_v0.0.7.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
+      "version": "0.0.6",
+      "desc": "修复多个自然段被截断只剩一个的问题",
+      "sha256": "4658f1bffc72477a27530f1e04b139e6db727a6b293f711975019ff900ff656d",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.0.6/youdao-dependOnService_v0.0.6.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
+      "version": "0.0.5",
+      "desc": "增加插件检测更新功能",
+      "sha256": "52d092d509ae768c70cc87efc70ee718f0a7ddefb01b108e5e3c44bd90cd7592",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/bob-plugin-akl-youdao-free-translate_v0.0.5/youdao-dependOnService_v0.0.5.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
+      "version": "0.0.3",
+      "desc": "初始版本",
+      "sha256": "5fddc4f6cf57853467135cd8ec0914bc21191c20c7f77f3be1496b37da11ecf8",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/bob-plugin-akl-youdao-free-translate/dependOnService.bobplugin",
+      "minBobVersion": "0.5.0"
+    }
+  ]
 }
