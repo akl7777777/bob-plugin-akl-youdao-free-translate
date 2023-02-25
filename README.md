@@ -9,7 +9,7 @@
 
 
 
-下载地址:[youdao-free_v0.1.1.bobplugin](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.1.1/youdao-dependOnService_v0.1.1.bobplugin)
+下载地址:[youdao-free_v0.1.2.bobplugin](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.1.2/youdao-dependOnService_v0.1.2.bobplugin)
 
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/84266551/221099163-e6f89b07-0a3a-42ae-8c1c-f95ae24901ad.png">
 
