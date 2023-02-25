@@ -25,7 +25,8 @@ function translate(query, completion) {
         const dictionaryUrl = 'https://dict.youdao.com/jsonapi_s?doctype=json&jsonversion=4'
 
         if (translate_text !== '') {
-            if (translate_text.split(/\s+/).length === 1) {
+            if (translate_text.split(/\s+/).filter(word => /^[a-zA-Z]+$/.test(word)).length === 1) {
+                // 只做英文单词,正则排除
                 let y = ["option_avatar", "nickname"]
                     , w = "Mk6hqtUp33DGGtoS63tTJbMUYjRrG1Lu"
                     , v = "webdict"
