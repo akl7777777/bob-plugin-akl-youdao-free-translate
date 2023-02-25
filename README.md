@@ -12,6 +12,8 @@
 下载地址:[youdao-free_v0.1.0.bobplugin](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.1.0/youdao-dependOnService_v0.1.0.bobplugin)
 
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/84266551/221099163-e6f89b07-0a3a-42ae-8c1c-f95ae24901ad.png">
+<img width="596" alt="image" src="https://user-images.githubusercontent.com/84266551/221359538-ca7125fc-fa80-423c-88f5-7f5c6313b557.png">
+
 
 ### bob翻译插件大合集:
 
