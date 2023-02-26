@@ -25,7 +25,9 @@ function translate(query, completion) {
         const dictionaryUrl = 'https://dict.youdao.com/jsonapi_s?doctype=json&jsonversion=4'
 
         if (translate_text !== '') {
-            if (translate_text.split(/\s+/).filter(word => /^[a-zA-Z]+$/.test(word)).length === 1) {
+            // 优化英文单词判定正则表达式
+            if (/^[a-zA-Z,\.\?!'\s]+$/.test(translate_text)
+                && translate_text.split(/\s+/).filter(word => /^[a-zA-Z\s]+$/.test(word)).length === 1) {
                 // 只做英文单词,正则排除
                 let y = ["option_avatar", "nickname"]
                     , w = "Mk6hqtUp33DGGtoS63tTJbMUYjRrG1Lu"
@@ -66,15 +68,15 @@ function translate(query, completion) {
                                 },
                             });
                         }
+                        const toDict = {
+                            word: translate_text,
+                            phonetics: [],
+                            parts: [],
+                            exchanges: [],
+                            additions: []
+                        }
                         if (resp.data.ec && resp.data.ec.word && resp.data.ec.word.trs && resp.data.ec.word.trs.length) {
                             const word = resp.data.ec.word
-                            const toDict = {
-                                word: translate_text,
-                                phonetics: [],
-                                parts: [],
-                                exchanges: [],
-                                additions: []
-                            }
                             if (word.usphone) {
                                 toDict.phonetics.push({
                                     "type": "us",
@@ -103,7 +105,7 @@ function translate(query, completion) {
                                     toDict.exchanges.push({name: e.wf.name, words: [e.wf.value]})
                                 })
                             }
-                            if(word.prototype){
+                            if (word.prototype) {
                                 toDict.exchanges.push({name: '原形', words: [word.prototype]})
                             }
                             toDict.additions.push({
@@ -116,6 +118,25 @@ function translate(query, completion) {
                                     to: query.detectTo,
                                     fromParagraphs: translate_text.split('\n'),
                                     toParagraphs: resp.data.ec.web_trans,
+                                    toDict: toDict,
+                                },
+                            });
+                        } else if (resp.data.typos && resp.data.typos.typo && resp.data.typos.typo.length) {
+                            // 优化未查询到单词时的模糊匹配
+                            resp.data.typos.typo.forEach(function (e) {
+                                toDict.exchanges.push({name: '您要找的是不是:' + e.trans, words: [e.word]})
+                            })
+                            // toDict.phonetics.push({
+                            //     "type": "us",
+                            //     "value": "未找到"
+                            // })
+                            toDict.parts.push({part: '抱歉,', means: ['未找到“' + translate_text + '”相关的词']})
+                            completion({
+                                result: {
+                                    from: query.detectFrom,
+                                    to: query.detectTo,
+                                    fromParagraphs: translate_text.split('\n'),
+                                    toParagraphs: ('抱歉没有找到“' + translate_text + '”相关的词').split('\n'),
                                     toDict: toDict,
                                 },
                             });
