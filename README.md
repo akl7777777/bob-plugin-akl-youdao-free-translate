@@ -11,11 +11,12 @@
 
 下载地址:[youdao-free_v0.1.3.bobplugin](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.1.3/youdao-dependOnService_v0.1.3.bobplugin)
 
+使用方法:双击安装,直接使用
+
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/84266551/221099163-e6f89b07-0a3a-42ae-8c1c-f95ae24901ad.png">
 
 
 https://user-images.githubusercontent.com/84266551/221367028-17e66c24-12a8-458b-b96a-856b545cb271.mp4
-
 
 
 ### bob翻译插件大合集:
@@ -25,6 +26,8 @@ https://user-images.githubusercontent.com/84266551/221367028-17e66c24-12a8-458b-
 >[有道翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate)
 
 >[火山翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-volcengine-free-translate)
+
+>[腾讯翻译君插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-tencent-free-translate/releases/download/v_0.0.1/bob-plugin-akl-tencent-free-translate_v0.0.1.bobplugin)
 
 >[百度翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate)
 
