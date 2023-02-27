@@ -27,7 +27,7 @@ https://user-images.githubusercontent.com/84266551/221367028-17e66c24-12a8-458b-
 
 >[火山翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-volcengine-free-translate)
 
->[腾讯翻译君插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-tencent-free-translate/releases/download/v_0.0.1/bob-plugin-akl-tencent-free-translate_v0.0.1.bobplugin)
+>[腾讯翻译君插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-tencent-free-translate)
 
 >[百度翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate)
 
