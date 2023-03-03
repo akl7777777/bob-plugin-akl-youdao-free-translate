@@ -22,6 +22,7 @@ https://user-images.githubusercontent.com/84266551/221367028-17e66c24-12a8-458b-
 
 ### bob翻译插件大合集:
 
+
 >[DeepL翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate)
 
 >[有道翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate)
@@ -37,6 +38,11 @@ https://user-images.githubusercontent.com/84266551/221367028-17e66c24-12a8-458b-
 >[彩云小译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-caiyunxiaoyi-free-translate)
 
 >[只为日语 - MOJi辞書（じしょ）](https://github.com/akl7777777/bob-plugin-akl-mojidict-translate)
+
+>[Bob翻译剪切板图片的AlfredWorkflow](https://github.com/akl7777777/BobTranslateClipboard)
+
+>[Bob的Postman接口调试插件](https://github.com/akl7777777/bob-plugin-akl-postman)
+
 
 项目结构简介:
 youdaoTranslateServer文件夹下用来启动Python服务,Python调用node环境的加密解密功能模拟请求
