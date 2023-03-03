@@ -7,6 +7,8 @@
 
 ## **重大更新,支持单个单词详细查询,并且不用再启动服务了**
 
+## **增加万字长文翻译功能;支持万字长文一次翻译,不用截断!**
+
 
 
 下载地址:[youdao-free_v0.1.3.bobplugin](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.1.3/youdao-dependOnService_v0.1.3.bobplugin)
