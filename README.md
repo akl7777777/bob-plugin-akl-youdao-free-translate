@@ -11,7 +11,7 @@
 
 
 
-下载地址:[youdao-free_v0.1.3.bobplugin](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v_0.1.3/youdao-dependOnService_v0.1.3.bobplugin)
+下载地址:[youdao-free_v0.1.5.bobplugin](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v0.1.5/bob-plugin-akl-youdao-free-translate_v0.1.5.bobplugin)
 
 使用方法:双击安装,直接使用
 
