@@ -153,52 +153,138 @@ function translate(query, completion) {
                     }
                 });
             } else {
-
                 const serverUrl = $option.serverUrl;
                 const type = $option.type;
-
                 let url = serverUrl || 'http://127.0.0.1:9527/youdaoTranslate';
-
                 if (type === 'local') {
+                    const localHeader = {
+                        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
+                    }
                     url = 'https://aidemo.youdao.com/trans'
-                    const body = Object.assign({}, {"q": translate_text, "from": source_lang, "to": target_lang});
-                    $http.request({
-                        method: "POST",
-                        url: url,
-                        header: {
-                            "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-                            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
-                        },
-                        body: body,
-                        handler: function (resp) {
-                            if (resp.error) {
-                                $log.error('*********** 本地resp ==> ' + JSON.stringify(resp))
+                    // 对超长的文本进行分段翻译,判断文本是否超过1000字符,如果超过,则按照句号进行拆分,取一千以内的最后一个句号的位置,进行分段翻译
+                    // 判断超过10000字符直接返回,避免循环调用接口过多导致封禁
+                    const originText = query.text
+                    if (originText.length > 10000) {
+                        completion({
+                            error: {
+                                type: 'api',
+                                message: '接口限制单次调用1000字符以内,为了避免循环次数过多封禁ip,总字符数不能超过10000个字符!',
+                            },
+                        });
+                    }
+                    // 不能超过1000个字符,所以需要循环拆分每隔1000调用一次
+                    let paramText = query.text
+                    // 定义返回结果拼接变量
+                    let concatRs = []
+                    // 定义指向切分位置
+                    let index = 0
+                    while (true) {
+                        if (originText.substring(index).length > 1000) {
+                            let tmpText = originText.substring(index, index + 1000)
+                            let idx = tmpText.lastIndexOf("。")
+                            if (tmpText.lastIndexOf("．") > idx) {
+                                idx = tmpText.lastIndexOf("．")
+                            }
+                            if (tmpText.lastIndexOf("\n") > idx) {
+                                idx = tmpText.lastIndexOf("\n")
+                            }
+                            if (tmpText.lastIndexOf(".") > idx) {
+                                idx = tmpText.lastIndexOf(".")
+                            }
+                            if (idx < 0) {
                                 completion({
                                     error: {
-                                        type: resp.error.code || 'unknown',
-                                        message: resp.error.localizedDescription || '未知错误',
-                                        addtion: resp.error.localizedDescription,
+                                        type: 'api',
+                                        message: '单句翻译不能超过1000个字符!',
                                     },
                                 });
+                                break
                             }
-                            if (resp.data.translation && resp.data.translation.length) {
+                            index = index + idx + 1
+                            paramText = tmpText.substring(0, idx + 1)
+                            const response = await $http.request({
+                                method: 'POST',
+                                url: url,
+                                header: localHeader,
+                                body: Object.assign({}, {"q": paramText, "from": source_lang, "to": target_lang})
+                            });
+                            if (response.error) {
+                                const {statusCode} = response.response;
+                                let reason;
+                                if (statusCode >= 400 && statusCode < 500) {
+                                    reason = 'param';
+                                } else {
+                                    reason = 'api';
+                                }
                                 completion({
-                                    result: {
-                                        from: query.detectFrom,
-                                        to: query.detectTo,
-                                        toParagraphs: resp.data.translation,
+                                    error: {
+                                        type: reason,
+                                        message: `接口响应错误 - ${response.data.msg}`,
+                                        addtion: JSON.stringify(response),
+                                    },
+                                });
+                                break
+                            } else {
+                                const translations = response.data.translation;
+                                if (!translations || !translations.length) {
+                                    continue
+                                }
+                                translations.forEach(function (e) {
+                                    concatRs.push(e)
+                                })
+                                // concatRs.push('\n')
+                            }
+                        } else {
+                            const response = await $http.request({
+                                method: 'POST',
+                                url: url,
+                                header: localHeader,
+                                body: Object.assign({}, {
+                                    "q": originText.substring(index),
+                                    "from": source_lang,
+                                    "to": target_lang
+                                })
+                            });
+                            if (response.error) {
+                                const {statusCode} = response.response;
+                                let reason;
+                                if (statusCode >= 400 && statusCode < 500) {
+                                    reason = 'param';
+                                } else {
+                                    reason = 'api';
+                                }
+                                completion({
+                                    error: {
+                                        type: reason,
+                                        message: `接口响应错误 - ${response.data.msg}`,
+                                        addtion: JSON.stringify(response),
                                     },
                                 });
                             } else {
-                                completion({
-                                    error: {
-                                        type: 'unknown',
-                                        message: JSON.stringify(resp.data) || '未知错误',
-                                        addtion: '未知错误',
-                                    },
-                                });
+                                const translations = response.data.translation;
+                                if (!translations || !translations.length) {
+                                    completion({
+                                        error: {
+                                            type: 'api',
+                                            message: '接口未返回翻译结果',
+                                        },
+                                    });
+                                    return;
+                                }
+                                translations.forEach(function (e) {
+                                    concatRs.push(e)
+                                })
                             }
+                            break
                         }
+                    }
+                    completion({
+                        result: {
+                            from: query.detectFrom,
+                            to: query.detectTo,
+                            toParagraphs: concatRs,
+                        },
                     });
                 } else {
                     try {
@@ -216,7 +302,6 @@ function translate(query, completion) {
                             body: body,
                             handler: function (resp) {
                                 if (resp.error) {
-                                    $log.error('*********** resp ==> ' + JSON.stringify(resp))
                                     completion({
                                         error: {
                                             type: resp.error.code || 'unknown',
