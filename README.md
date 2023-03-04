@@ -41,10 +41,11 @@ https://user-images.githubusercontent.com/84266551/221367028-17e66c24-12a8-458b-
 
 >[只为日语 - MOJi辞書（じしょ）](https://github.com/akl7777777/bob-plugin-akl-mojidict-translate)
 
+>[Papago Naver 韩语翻译(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-papago-free-translate)
+
 >[Bob翻译剪切板图片的AlfredWorkflow](https://github.com/akl7777777/BobTranslateClipboard)
 
 >[Bob的Postman接口调试插件](https://github.com/akl7777777/bob-plugin-akl-postman)
-
 
 项目结构简介:
 youdaoTranslateServer文件夹下用来启动Python服务,Python调用node环境的加密解密功能模拟请求
