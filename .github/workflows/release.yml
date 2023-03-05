@@ -2,7 +2,7 @@ name: Release Plugin
 on:
   push:
     paths:
-      - "src/info.json"
+      - "bobplugin/dependOnService/src/info.json"
 jobs:
   release:
     runs-on: ubuntu-latest
