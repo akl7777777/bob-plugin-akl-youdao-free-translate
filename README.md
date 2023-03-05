@@ -13,7 +13,12 @@
 
 下载地址:[youdao-free_v0.1.5.bobplugin](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v0.1.5/bob-plugin-akl-youdao-free-translate_v0.1.5.bobplugin)
 
-使用方法:双击安装,直接使用
+使用方法:双击安装,直接使用,支持单词模式和超长万字文本模式自动切换
+
+效果图如下:
+
+![iShot_2023-03-05_19 02 08](https://user-images.githubusercontent.com/84266551/222956626-b69aa14e-de7f-437c-8677-d96e283d6d44.gif)
+
 
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/84266551/221099163-e6f89b07-0a3a-42ae-8c1c-f95ae24901ad.png">
 
