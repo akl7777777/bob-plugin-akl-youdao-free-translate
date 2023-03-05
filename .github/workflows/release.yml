@@ -22,7 +22,7 @@ jobs:
         id: last-commit
         run: echo "::set-output name=last_commit_title::$(git log -1 --pretty=format:%s)"
 
-      - run: git checkout -- src/
+      - run: git checkout -- bobplugin/dependOnService/src/
 
       - name: Update appcast.json
         id: run_script
