@@ -17,17 +17,14 @@
 
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/84266551/221099163-e6f89b07-0a3a-42ae-8c1c-f95ae24901ad.png">
 
-
-https://user-images.githubusercontent.com/84266551/221367028-17e66c24-12a8-458b-b96a-856b545cb271.mp4
-
-
-
 ### bob翻译插件大合集:
 
 
 >[DeepL翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate)
 
 >[有道翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate)
+
+>[CNKI学术翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-cnki-free-translate)
 
 >[火山翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-volcengine-free-translate)
 
@@ -46,6 +43,12 @@ https://user-images.githubusercontent.com/84266551/221367028-17e66c24-12a8-458b-
 >[Bob翻译剪切板图片的AlfredWorkflow](https://github.com/akl7777777/BobTranslateClipboard)
 
 >[Bob的Postman接口调试插件](https://github.com/akl7777777/bob-plugin-akl-postman)
+
+
+https://user-images.githubusercontent.com/84266551/221367028-17e66c24-12a8-458b-b96a-856b545cb271.mp4
+
+
+
 
 项目结构简介:
 youdaoTranslateServer文件夹下用来启动Python服务,Python调用node环境的加密解密功能模拟请求
