@@ -2,6 +2,13 @@
   "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
   "versions": [
     {
+      "version": "0.1.6",
+      "desc": "优化词典和超长文本处理方式",
+      "sha256": "cbe7dc7ca83f8c94dc8984cb93b30f62669435e6629f4ec24765a6c87ac9a6ca",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v0.1.6/bob-plugin-akl-youdao-free-translate_v0.1.6.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.1.5",
       "desc": "增加万字长文翻译功能;支持万字长文一次翻译,不用截断!",
       "sha256": "127f2348341ef66d9068d507beb063b075e776632e6fd2ff65604c187c27cad9",
