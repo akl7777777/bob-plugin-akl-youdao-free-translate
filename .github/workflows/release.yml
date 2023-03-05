@@ -27,7 +27,7 @@ jobs:
       - name: Update appcast.json
         id: run_script
         run: |
-          output=$(python3 scripts/update_appcast.py "${{ steps.last-commit.outputs.last_commit_title }}")
+          output=$(python3 bobplugin/dependOnService/scripts/update_appcast.py "${{ steps.last-commit.outputs.last_commit_title }}")
           echo "version=$output" >> $GITHUB_OUTPUT
 
       - name: Package plugin final
