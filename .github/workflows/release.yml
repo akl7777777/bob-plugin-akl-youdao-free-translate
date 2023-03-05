@@ -37,7 +37,7 @@ jobs:
         run: |
           git config --global user.name 'akl7777777'
           git config --global user.email 'akl7777777@163.com'
-          git add appcast.json
+          git add bobplugin/dependOnService/appcast.json
           git commit -am 'update appcast.json'
 
       - name: Push changes
