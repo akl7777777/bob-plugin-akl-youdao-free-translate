@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def update_appcast(message):
-    with open ("src/info.json", "r") as f:
+    with open ("bobplugin/dependOnService/src/info.json", "r") as f:
         info = json.load(f)
     version = info["version"]
     release_file = Path(f"release/bob-plugin-akl-youdao-free-translate.bobplugin")
@@ -20,7 +20,7 @@ def update_appcast(message):
         "url": f"https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v{version}/bob-plugin-akl-youdao-free-translate_v{version}.bobplugin",
         "minBobVersion": "0.5.0"
     }
-    appcast_file = Path("appcast.json")
+    appcast_file = Path("bobplugin/dependOnService/appcast.json")
     if appcast_file.is_file():
         with open(appcast_file, "r") as f:
             appcast = json.load(f)
