@@ -83,7 +83,7 @@ function translate(query, completion) {
                                     "value": word.usphone,
                                     "tts": {
                                         "type": "url",
-                                        "value": "https://dict.youdao.com/dictvoice?audio=" + word.usspeech
+                                        "value": "https://dict.youdao.com/dictvoice?audio=" + word.usspeech + "&type=2"
                                     }
                                 })
                             }
@@ -93,7 +93,7 @@ function translate(query, completion) {
                                     "value": word.ukphone,
                                     "tts": {
                                         "type": "url",
-                                        "value": "https://dict.youdao.com/dictvoice?audio=" + word.ukspeech
+                                        "value": "https://dict.youdao.com/dictvoice?audio=" + word.ukspeech + "&type=1"
                                     }
                                 })
                             }
