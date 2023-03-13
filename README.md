@@ -22,8 +22,10 @@
 
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/84266551/221099163-e6f89b07-0a3a-42ae-8c1c-f95ae24901ad.png">
 
-### 友情链接==>ChatGPT免费桌面版客户端(支持Windows,macOS)
-下载地址:[OpenAI-ChatGPT免费桌面版客户端](https://github.com/akl7777777/free-chatgpt-client-pub)
+### 友情链接==>ChatGPT免费桌面版客户端(支持Windows,macOS,Android)
+桌面版ChatGPT下载地址:[OpenAI-ChatGPT免费桌面版客户端](https://github.com/akl7777777/free-chatgpt-client-pub)
+
+手机版ChatGPT下载地址:[OpenAI-ChatGPT免费手机版客户端](https://github.com/akl7777777/free-chatgpt-client-mobile-pub)
 
 ### bob翻译插件大合集:
 
