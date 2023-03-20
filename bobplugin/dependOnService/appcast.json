@@ -2,6 +2,13 @@
   "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
   "versions": [
     {
+      "version": "0.1.8",
+      "desc": "优化",
+      "sha256": "d2cefe3da0207330414e17ec68bac7d4681a39361fe8c4c964f09b99c573916c",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v0.1.8/bob-plugin-akl-youdao-free-translate_v0.1.8.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.1.7",
       "desc": "修正词典发音无法区分英式美式的问题",
       "sha256": "fd6419be558aacb09a1d63890c85c188ffadbb6e9fc8e37ec58f6dc05c99efe7",
