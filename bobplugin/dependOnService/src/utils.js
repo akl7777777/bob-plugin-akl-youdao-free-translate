@@ -14,7 +14,10 @@ function replacePunctuation(str) {
         .replace(/(\w),/g, '$1，').replace(/,/g, '，')
         .replace(/(\w)\./g, '$1。').replace(/\./g, '。')
         .replace(/(\w);/g, '$1；').replace(/;/g, '；')
-        .replace(/(\w):/g, '$1：').replace(/:/g, '：');
+        .replace(/(\w):/g, '$1：').replace(/:/g, '：')
+        .replace(/(\w)\(/g, '$1（').replace(/\(/g, '（')
+        .replace(/(\w)\)/g, '$1）').replace(/\)/g, '）')
+        ;
 }
 
 exports.langMap = langMap;
