@@ -2,6 +2,13 @@
   "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
   "versions": [
     {
+      "version": "0.2.1",
+      "desc": "fix: 中文译文中的英文标点符号问题 #3中文译文中的括号总是英文的，复制过来后需要频繁改动，非常不方便。        希望能调整成中文。",
+      "sha256": "b87bc541ba390dee8c7a429f37d5e78031d1c042d7a37dd2455c5f0419e037cc",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v0.2.1/bob-plugin-akl-youdao-free-translate_v0.2.1.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.2.0",
       "desc": "fix: 修复官网修改参数导致无法翻译的问题",
       "sha256": "fba208ce2ef394a8292529a678b64db4fb75e88f0fff2393fe51fb389c38024c",
