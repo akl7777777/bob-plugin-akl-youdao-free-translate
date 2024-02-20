@@ -1,6 +1,6 @@
 {
   "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "category": "translate",
   "name": "Free 有道翻译",
   "summary": "有道翻译免费免秘钥插件",

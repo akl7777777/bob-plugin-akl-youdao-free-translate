@@ -18,8 +18,8 @@ function translate(query, completion) {
             });
             throw err;
         }
-        const source_lang = sourceLanguage || 'ZH';
-        const target_lang = targetLanguage || 'EN';
+        const source_lang = sourceLanguage || 'zh-CHS';
+        const target_lang = targetLanguage || 'en';
         const translate_text = query.text || '';
 
         const dictionaryUrl = 'https://dict.youdao.com/jsonapi_s?doctype=json&jsonversion=4'
