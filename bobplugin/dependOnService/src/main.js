@@ -231,6 +231,10 @@ function translate(query, completion) {
                                     continue
                                 }
                                 translations.forEach(function (e) {
+                                    // 如果目标是中文,则需要将英文标点替换为中文标点
+                                    if (target_lang === 'zh-CHS') {
+                                        e = utils.replacePunctuation(e)
+                                    }
                                     concatRs.push(e)
                                 })
                                 // concatRs.push('\n')
@@ -273,6 +277,10 @@ function translate(query, completion) {
                                     return;
                                 }
                                 translations.forEach(function (e) {
+                                    // 如果目标是中文,则需要将英文标点替换为中文标点
+                                    if (target_lang === 'zh-CHS') {
+                                        e = utils.replacePunctuation(e)
+                                    }
                                     concatRs.push(e)
                                 })
                             }
@@ -317,6 +325,10 @@ function translate(query, completion) {
                                             let rsParagraph = ''
                                             for (let j = 0; j < resp.data.translateResult[i].length; j++) {
                                                 rsParagraph += resp.data.translateResult[i][j].tgt
+                                            }
+                                            // 如果目标是中文,则需要将英文标点替换为中文标点
+                                            if (target_lang === 'zh-CHS') {
+                                                rsParagraph = utils.replacePunctuation(rsParagraph)
                                             }
                                             rs.push(rsParagraph)
                                         }
