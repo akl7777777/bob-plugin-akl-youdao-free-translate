@@ -2,6 +2,13 @@
   "identifier": "com.akl.bob-plugin-akl-youdao-free-translate",
   "versions": [
     {
+      "version": "0.2.0",
+      "desc": "fix: 修复官网修改参数导致无法翻译的问题",
+      "sha256": "fba208ce2ef394a8292529a678b64db4fb75e88f0fff2393fe51fb389c38024c",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate/releases/download/v0.2.0/bob-plugin-akl-youdao-free-translate_v0.2.0.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.1.8",
       "desc": "优化",
       "sha256": "d2cefe3da0207330414e17ec68bac7d4681a39361fe8c4c964f09b99c573916c",
